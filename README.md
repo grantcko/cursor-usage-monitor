@@ -6,6 +6,19 @@ Behavior: poll, compare buckets, alert only on upward crosses, POST a webhook on
 
 Tokens, `auth.json`, webhook URLs, and state files are gitignored and must never be committed.
 
+
+## How this was built
+
+This project was **vibe-coded**: the production code and docs were written by AI agents, not hand-authored line by line.
+
+| When | What | Harness | Model |
+| --- | --- | --- | --- |
+| **2026-09-05** | Living cron monitor (poll meters, 5% / +$10 buckets, webhook on crosses) | [Cursor Grok Bot](https://cursor.com/docs/grok-bot) desktop assistant | Cursor-managed Grok Bot serving mix (no fixed customer model picker) |
+| **2026-09-06** | Packaged into this library + CLI + localhost HTTP API | [Cursor Cloud Agents](https://cursor.com/agents) | `cursor-grok-4.6-high` |
+| **2026-09-06** | Shareability scrub (docs/labels/history) | Cursor Grok Bot | Cursor-managed Grok Bot serving mix |
+
+**Date stamp:** September 2026. If you are reading this much later, assume the undocumented `DashboardService` RPCs may have moved.
+
 ## Official API check (2026-09)
 
 Cursor’s documented APIs ([cursor.com/docs/api](https://cursor.com/docs/api)) are:
