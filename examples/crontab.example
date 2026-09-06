@@ -1,0 +1,5 @@
+# Example schedule: hourly during waking hours in your local timezone.
+# Install with: crontab -e  (edit the binary path for your install)
+
+CRON_TZ=UTC
+0 8-22 * * * /usr/local/bin/cursor-usage-monitor --once >/dev/null 2>&1

@@ -1,0 +1,14 @@
+[Unit]
+Description=cursor-usage-monitor local HTTP API (127.0.0.1)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/cursor-usage-monitor serve --host 127.0.0.1 --port 47821
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+# Do not put CURSOR_ACCESS_TOKEN here. The service reads ~/.config/cursor/auth.json.
+
+[Install]
+WantedBy=default.target

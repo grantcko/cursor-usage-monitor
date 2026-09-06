@@ -1,0 +1,16 @@
+# Copy this file to ~/.config/cursor-usage-monitor/webhook.url
+# (the live file must contain ONLY the URL — no comments, no quotes).
+#
+#   mkdir -p ~/.config/cursor-usage-monitor
+#   echo 'https://hooks.example.invalid/cursor-usage' > ~/.config/cursor-usage-monitor/webhook.url
+#   chmod 600 ~/.config/cursor-usage-monitor/webhook.url
+#
+# Optional auth header:
+#   echo 'X-Webhook-Key' > ~/.config/cursor-usage-monitor/webhook.header
+#   echo 'replace-with-a-long-random-secret' > ~/.config/cursor-usage-monitor/webhook.key
+#   chmod 600 ~/.config/cursor-usage-monitor/webhook.key
+#
+# The monitor POSTs JSON only when a meter crosses an upward bucket.
+# Never commit webhook.url, webhook.key, or webhook.header.
+
+https://hooks.example.invalid/cursor-usage

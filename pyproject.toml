@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cursor-usage-monitor"
+version = "1.0.0"
+description = "Cursor / Grok Bot usage bucket monitor: CLI, library, and localhost HTTP API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "cursor-usage-monitor contributors" }]
+keywords = ["cursor", "grok-bot", "usage", "billing", "monitor"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Environment :: Console",
+    "Topic :: System :: Monitoring",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/YOUR_GITHUB_USER/cursor-usage-monitor"
+
+[project.scripts]
+cursor-usage-monitor = "cursor_usage_monitor.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cursor_usage_monitor = ["py.typed"]
